@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { use, useState } from 'react'
 import ImageUpload from './ImageUpload'
 import ImagePreview from './ImagePreview'
 
 const Home = () => {
+  const [uploadImage, setUploadImage] = useState(null)
+  const [enhancedImage, setEnhancedImage] = useState(null)
+  const [loading, setloading] = useState(false);
+
+  const UploadImageHandler = (file) => {
+setUploadImage(URL.createObjectURL(file))   
+  }
   return (
     <>
-    <ImageUpload/>
-    <ImagePreview/>
+      <ImageUpload UploadImageHandler={ UploadImageHandler} />
+      <ImagePreview loading={ loading} uploaded={uploadImage} enhanced={enhancedImage} />
     </>
   )
 }
