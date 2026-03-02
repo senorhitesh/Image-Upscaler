@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 
 const App = () => {
   return <>
-    <div className='flex h-screen items-center justify-center flex-col  bg-gray-50 '>
+    <div className='flex h-screen pt-10 items-center justify-center flex-col  bg-gray-50 '>
       <h1 className='text-3xl font-bold text-gray-950'>AI Image Enhancer</h1>
       <p className='text-gray-700'>Upload your Image and let AI enhance in seconds !</p>
           <Home/>
